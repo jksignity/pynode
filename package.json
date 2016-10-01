@@ -1,6 +1,6 @@
 {
   "name": "pynode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a small npm libary for launching python workers and two way communication",
   "main": "index.js",
   "scripts": {

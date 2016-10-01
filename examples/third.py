@@ -6,11 +6,10 @@ def read_data():
 	return json.loads(lines[0])
 
 def main():
-	lines = read_data()
-	# now lines above, contain arguments which can be 
+	result = read_data()
+	# now result above, contain arguments which can be 
 	# a dict or a list, use as you need
-	# while sending data back, encode using json
-	print json.dumps(lines)
+	print result
 
 
 if __name__ == '__main__':

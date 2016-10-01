@@ -19,19 +19,16 @@ small npm library for launching python workers and providing two way communicati
 	var pynode = require('pynode');
 	pynode.exec(filename, arguments)
 	.then(function(data){
-		data = data[0].replace(/'/g, '"').replace(/\r?\n|\r/g, '');
+		data = JSON.parse(data);
 		console.log(data);
 	})
 	.catch(function(err){
 		console.log(err)
 	})
 
-### Side Notes:
+### Side Note:
 
 * arguments are optional
-* if returning dictionaries or lists from python file, use json.dumps
-* removing \r,\n and "'" helps in better processing of output from python
-* \r, \n are present because data is still from stdout
 
 ## Python files samples
 
@@ -58,4 +55,5 @@ small npm library for launching python workers and providing two way communicati
 
 ## Release History
 
+* 0.2.0 Fixed some minor issues and bugs
 * 0.1.0 Initial release

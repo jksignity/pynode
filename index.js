@@ -56,8 +56,8 @@ module.exports = {
 		python.stdout.on('close', function(d){
 			var result = output.join().trim();
 
-			// resolve the output
-			dfd.resolve(output);
+			// resolve the result
+			dfd.resolve(result);
 		});
 
 		// check if arguments present or not
